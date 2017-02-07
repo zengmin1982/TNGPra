@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- testng.xml，直接执行 -->
+<suite thread-count="1000" name="Demo" parallel="tests">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="TestDemo">
+    <parameter name="result" value="This is testresult"/>
+    <parameter name="testname" value="TestDemo"/>
+    <parameter name="testcase" value="This is testcase"/>
+    <classes>
+      <class name="com.zengmin.test.suite.demo.TestSeo2">
+        <methods>
+          <include name="seo2"/>
+        </methods>
+      </class> <!-- com.zengmin.test.suite.demo.TestSeo2 -->
+    </classes>
+  </test> <!-- TestDemo -->
+</suite> <!-- Demo -->

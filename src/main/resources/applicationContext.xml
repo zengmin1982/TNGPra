@@ -44,5 +44,4 @@
 		p:basePackage="com.zengmin.dao" p:annotationClass="com.zengmin.common.Mapper">
 		<property name="sqlSessionFactoryBeanName" value="dsdsqlSessionFactory"/>
 	</bean>
-
 </beans>

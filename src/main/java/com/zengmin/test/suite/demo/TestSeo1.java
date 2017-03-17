@@ -12,13 +12,12 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zengmin.dao.DemoDao;
+import com.zengmin.test.BaseTest;
 /*
  * 继承AbstractTestNGSpringContextTests并且添加注解@ContextConfiguration使得该测试类在Spring框架中集成，
  * 可以使用Spring的事务管理，数据源管理，aop等功能
  */
-@Test
-@ContextConfiguration(locations = { "classpath:applicationContext.xml" })
-public class TestSeo1 extends AbstractTestNGSpringContextTests{
+public class TestSeo1 extends BaseTest{
 	//通过Spring组装mybatis数据类
 	@Autowired
 	DemoDao dd;
